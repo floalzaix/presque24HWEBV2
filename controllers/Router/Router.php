@@ -5,8 +5,10 @@ use Controllers\AuthController;
 use Controllers\ErrController;
 use Controllers\MapController;
 use Controllers\MonsterController;
+use Controllers\ProfilController;
 use Controllers\Router\Route\RouteAuth;
 use Controllers\Router\Route\RouteErr;
+use Controllers\Router\Route\RouteProfil;
 use Route\RouteMap;
 use Route\RouteMonster;
 
@@ -31,7 +33,8 @@ class Router {
             "map" => new MapController(),
             "monstre" => new MonsterController(),
             "auth" => new AuthController(),
-            "err" => new ErrController()
+            "err" => new ErrController(),
+            "profil" => new ProfilController()
         ];
     }
 
@@ -45,7 +48,8 @@ class Router {
             "map" => new RouteMap($this->ctrlList["map"]),
             "monstre" => new RouteMonster($this->ctrlList["monstre"]),
             "auth" => new RouteAuth($this->ctrlList["auth"]),
-            "err" => new RouteErr($this->ctrlList["err"])
+            "err" => new RouteErr($this->ctrlList["err"]),
+            "profil" => new RouteProfil($this->ctrlList["profil"])
         ];
     }
 
@@ -67,10 +71,11 @@ class Router {
         if (!array_key_exists($action, $this->routeList)) {
             $action = "err";
             $param = ["err_type" => "404"];
-        } elseif ($action != "auth" && $action != "map" && !(isset($_SESSION["connected"]) ?? false)) {
-            $action = "err";
-            $param = ["err_type" => "401"];
         }
+        // elseif ($action != "auth" && $action != "map" && !(isset($_SESSION["connected"]) ?? false)) {
+        //     $action = "err";
+        //     $param = ["err_type" => "401"];
+        // }
 
         return $this->routeList[$action]->action($param, $method);
     }

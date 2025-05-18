@@ -39,12 +39,14 @@ class AuthController
             ]
         ]);
 
-        $data = $response->getBody();
+        $data = $response->getBody()->getContents();
+
+        $data = json_decode($data, true);
 
         $_SESSION["connected"] = true;
         $_SESSION["user_name"] = $data["nom"];
         $_SESSION["user_surname"] = $data["prenom"];
-        $_SESSION["user_admin"] = $data["admin"];
+        $_SESSION["user_admin"] = $data["droit"];
     }
 
     public function displayConnectionPage(): void
