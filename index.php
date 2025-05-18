@@ -5,8 +5,6 @@ session_start();
 require_once __DIR__."/vendor/autoload.php";
 require_once("helpers/psr4_autoloader_class.php");
 
-use Router\Router;
-
 /*Instanciation de la classe Psr4AutoloaderClass*/
 $loader = new \helpers\psr4AutoloaderClass(); /*Instantiation de la classe qui nous permettras de load nos classes*/
 $loader->register();
@@ -19,6 +17,8 @@ $loader->addNamespace('Config', __DIR__.'/Config');
 $loader->addNamespace('Models', __DIR__.'/Models');
 $loader->addNamespace('Router', __DIR__.'/Controllers/Router');
 $loader->addNamespace('Route', __DIR__.'/Controllers/Router/Route');
+
+use \Router\Router;
 
 try {
     $router = new Router(); /*Instanciation de la classe Router*/

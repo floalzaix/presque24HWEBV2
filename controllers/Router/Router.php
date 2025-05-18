@@ -1,6 +1,7 @@
 <?php
 
 namespace Router;
+
 use Controllers\AuthController;
 use Controllers\ErrController;
 use Controllers\MapController;
