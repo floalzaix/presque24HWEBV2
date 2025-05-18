@@ -3,11 +3,13 @@
 namespace Router;
 
 use Controllers\AuthController;
+use Controllers\BruController;
 use Controllers\ErrController;
 use Controllers\MapController;
 use Controllers\MonsterController;
 use Controllers\ProfilController;
 use Controllers\Router\Route\RouteAuth;
+use Controllers\Router\Route\RouteBru;
 use Controllers\Router\Route\RouteErr;
 use Controllers\Router\Route\RouteProfil;
 use Route\RouteMap;
@@ -35,7 +37,8 @@ class Router {
             "monstre" => new MonsterController(),
             "auth" => new AuthController(),
             "err" => new ErrController(),
-            "profil" => new ProfilController()
+            "profil" => new ProfilController(),
+            "bru" => new BruController()
         ];
     }
 
@@ -50,7 +53,8 @@ class Router {
             "monstre" => new RouteMonster($this->ctrlList["monstre"]),
             "auth" => new RouteAuth($this->ctrlList["auth"]),
             "err" => new RouteErr($this->ctrlList["err"]),
-            "profil" => new RouteProfil($this->ctrlList["profil"])
+            "profil" => new RouteProfil($this->ctrlList["profil"]),
+            "bru" => new RouteBru($this->ctrlList["bru"])
         ];
     }
 
