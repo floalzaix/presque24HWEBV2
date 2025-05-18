@@ -12,11 +12,11 @@ $loader->register();
 /* ========== Ajout des Namespace dans notre loader ========== */
 $loader->addNamespace('Helpers', '/Helpers');
 $loader->addNamespace('League\Plates', '/Vendor/plates-3.6.0/src');
-$loader->addNamespace('Controllers','/Controllers');
-$loader->addNamespace('Config', '/Config');
-$loader->addNamespace('Models', '/Models');
-$loader->addNamespace('Router', '/Controllers/Router');
-$loader->addNamespace('Route', '/Controllers/Router/Route');
+$loader->addNamespace('Controllers','/controllers');
+$loader->addNamespace('Config', '/config');
+$loader->addNamespace('Models', '/models');
+$loader->addNamespace('Router', '/controllers/Router');
+$loader->addNamespace('Route', '/controllers/Router/Route');
 
 use \Router\Router;
 
