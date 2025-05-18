@@ -10,13 +10,13 @@ $loader = new \helpers\psr4AutoloaderClass(); /*Instantiation de la classe qui n
 $loader->register();
 
 /* ========== Ajout des Namespace dans notre loader ========== */
-$loader->addNamespace('Helpers', __DIR__ . '/Helpers');
-$loader->addNamespace('League\Plates', __DIR__ . '/Vendor/plates-3.6.0/src');
-$loader->addNamespace('Controllers',__DIR__.'/Controllers');
-$loader->addNamespace('Config', __DIR__.'/Config');
-$loader->addNamespace('Models', __DIR__.'/Models');
-$loader->addNamespace('Router', __DIR__.'/Controllers/Router');
-$loader->addNamespace('Route', __DIR__.'/Controllers/Router/Route');
+$loader->addNamespace('Helpers', '/Helpers');
+$loader->addNamespace('League\Plates', '/Vendor/plates-3.6.0/src');
+$loader->addNamespace('Controllers','/Controllers');
+$loader->addNamespace('Config', '/Config');
+$loader->addNamespace('Models', '/Models');
+$loader->addNamespace('Router', '/Controllers/Router');
+$loader->addNamespace('Route', '/Controllers/Router/Route');
 
 use \Router\Router;
 
