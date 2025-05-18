@@ -73,7 +73,7 @@ $this->layout("templates", ["title" => Config::get("title")]);
 
     <div class="p5">
         <h2>5<sup>ème</sup> disparition : Martin Elgarno</h2>
-        5e Disparition de Martin Elgarno dans la forêt de Brocéliande
+        Disparition de Martin Elgarno dans la forêt de Brocéliande
 
         Ploërmel, 14 novembre 2024 - Édition Exceptionnelle
         
