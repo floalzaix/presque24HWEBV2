@@ -15,7 +15,6 @@
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<<<<<<< HEAD
 
 
     <!-- Css personnalisé-->
@@ -24,11 +23,3 @@
 <script src="./public/js/map.js"></script>
 
 <img src="./public/images/assets/fond.png" style="display:none;" alt="">
-=======
-<!-- Css personnalisé-->
-<link rel="stylesheet" href="/Web/24h/public/css/map.css">
-
-<script src="/Web/24h/public/js/map.js"></script>
-
-<img src="/Web/24h/public/images/assets/fond.png" style="display:none;" alt="">
->>>>>>> ee70bbdabb635f3d6e36f799e9af14b3acaf8798
