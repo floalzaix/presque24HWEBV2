@@ -12,6 +12,7 @@ $randomNumber = random_int(0, 3);
 ?>
 
 <link rel="stylesheet" href="public/css/profil.css">
+<script src="public/css/profil.css"></script>
 
 <div class="profil">
     <div class="container-photo-profile">

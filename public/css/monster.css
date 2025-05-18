@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.no-units {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/79eaaac7-3947-488e-bad6-b1a6e159431c/de4a5b0-a70d7ac2-674d-4c04-92fa-869d1a88785f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc5ZWFhYWM3LTM5NDctNDg4ZS1iYWQ2LWIxYTZlMTU5NDMxY1wvZGU0YTViMC1hNzBkN2FjMi02NzRkLTRjMDQtOTJmYS04NjlkMWE4ODc4NWYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.KE2taY4WzULWn0YoGX-HlH_1ANGCjNL4mkNrsFyfvrg');
+    background-size: cover; 
+    background-position: center;
+    border-radius: 15px; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); 
+    color: #f5f5f5;
+    max-height: 300px;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #444; 
+    backdrop-filter: blur(5px);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+}
+
+#add-uni-bt {
+    position: relative;
+    background-color: #97a2a6b6;
+    color: white; 
+    border: none;
+    padding: 12px 25px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    top: 70%;
+}
+
+#add-uni-bt:hover {
+    background-color: #d2d7d9a8; 
+}
+
+#add-uni-bt:active {
+    scale: 90%;
+    background-color: #d2d7d9a8; 
+}
+
+.no-units p{
+    top: 60%;
+}
+
+.message-erreur {
+    position: absolute;
+    bottom: 30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    text-align: center;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    min-height: 100px; 
+}
+
+.message.success {
+    background-color: #d4edda; /* Vert clair pour le succès */
+    color: #155724;
+    border: 3px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da; /* Rouge clair pour l'erreur */
+    color: #721c24;
+    border: 3px solid #f5c6cb;
+}
+
+#ok-btn-msg {
+    position: absolute;
+    bottom: 10px; /* À 10px du bas du conteneur */
+    left: 50%; /* Centré horizontalement */
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#ok-btn-msg:hover {
+    background-color: #f2f2f2;
+}
+
+#ok-btn-msg:active {
+    background-color: #e0e0e0;
+}
+
+.container {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    width: 90%;
+    margin-top: 2%;
+    height: 90%;
+} 
+
+.container .slide .item{
+    position: absolute;
+    top: 60%;
+    background-size: cover;
+    background-position: 90% 50%;
+    width: 200px;
+    height: 300px;
+    display: inline-block;
+    border-radius: 5%;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(0){
+    top: 0; 
+    left: 0;
+    border-radius: 0;
+    background-position: 90% 50%; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.slide .item:nth-child(2){
+    left:65%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+.slide .item:nth-child(3){
+    left:80%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+.slide .item:nth-child(4){
+    left:95%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    opacity: 0;
+    display: none;
+}
+
+/*Ici on prend tout les item de 6, 7, 8,...,n-1 ,n */
+.slide .item:nth-child(n + 5){
+    left: calc(95% + 15%);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    opacity: 0;
+    display: none;
+}
+
+.container .slide .item .unit-content {
+    position: absolute;
+    width: 15%;
+    height: 40%;
+    top: 30%;
+    left: 20%;
+    text-align: left;
+}
+
+.container .slide .item .unit-content .unit-name{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 900;
+    color: #eee;
+    opacity: 0.7;
+    display: block;
+}
+
+.container .slide .item:nth-child(n+2) .unit-content{
+    display: none;
+}
+
+.lr_button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%; 
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px; 
+    z-index: 100; 
+}
+
+.lr_button button {
+    background-color: (92 92 92 / 51%);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.lr_button button img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.lr_button button:hover img {
+    transform: scale(1.1);
+}
+
+.button a img {
+    background-color: #f5f5f579;
+    border-radius: 30%;
+    width: 30px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .container .slide .item {
+        width: 150px;
+        height: 200px;
+    }
+    .container .slide .item .unit-name {
+        font-size: 50px;
+    }
+}
