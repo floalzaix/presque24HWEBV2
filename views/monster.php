@@ -1,5 +1,6 @@
 <?php
     $this->layout('templates', ['title' => 'La Guilde']);
+    $listMonsters = ['babayaga', 'banshee', 'basilic', 'corbeau', 'demon', 'draugr', 'espritforet', 'goblin', 'gremlin', 'leshi', 'loup', 'loupgarou', 'vampire'];
 ?>
 
 <div class="container">

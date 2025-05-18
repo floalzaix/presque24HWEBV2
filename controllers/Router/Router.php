@@ -1,14 +1,17 @@
 <?php
 
 namespace Router;
+
 use Controllers\AuthController;
 use Controllers\ErrController;
 use Controllers\MapController;
 use Controllers\MonsterController;
 use Controllers\ProfilController;
+use Controllers\BountyController;
 use Controllers\Router\Route\RouteAuth;
 use Controllers\Router\Route\RouteErr;
 use Controllers\Router\Route\RouteProfil;
+use Controllers\Router\Route\RouteBounty;
 use Route\RouteMap;
 use Route\RouteMonster;
 
@@ -34,7 +37,8 @@ class Router {
             "monstre" => new MonsterController(),
             "auth" => new AuthController(),
             "err" => new ErrController(),
-            "profil" => new ProfilController()
+            "profil" => new ProfilController(),
+            "bounty" => new BountyController()
         ];
     }
 
@@ -49,7 +53,8 @@ class Router {
             "monstre" => new RouteMonster($this->ctrlList["monstre"]),
             "auth" => new RouteAuth($this->ctrlList["auth"]),
             "err" => new RouteErr($this->ctrlList["err"]),
-            "profil" => new RouteProfil($this->ctrlList["profil"])
+            "profil" => new RouteProfil($this->ctrlList["profil"]),
+            "bounty" => new RouteBounty($this->ctrlList["bounty"])
         ];
     }
 

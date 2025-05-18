@@ -1,9 +1,9 @@
 <?php
 namespace Models;
 
-class Monster {
+class Bounty {
     private ?string $id;
-    private string $name;
+    private string $monster;
     private int $cost;
 
     public function setId(?string $id) : void {
@@ -17,12 +17,12 @@ class Monster {
         return $this->id;
     }
 
-    public function setName(string $name) : void {
-        $this->name = $name;
+    public function setMonster(string $monster) : void {
+        $this->monster = $monster;
     }
 
-    public function getName() : string {
-        return $this->name;
+    public function getMonster() : string {
+        return $this->monster;
     }
 
     public function setCost(int $cost) : void {

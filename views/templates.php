@@ -15,6 +15,9 @@
                 <a href="index.php?action=map">Map</a>
                 <a href="index.php?action=monstre">Monstre</a>
                 <a href="index.php?action=broceliande">L’affaire de Broceliande</a>
+                <?php if (isset($_SESSION["user_admin"]) && $_SESSION["user_admin"] === "admin"): ?>
+                    <a href="index.php?action=bounty">Bounty</a>
+                <?php endif; ?>
                 <a href="index.php?action=profil">Profil</a>
             </nav>
         </div>
