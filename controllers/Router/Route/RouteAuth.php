@@ -33,6 +33,7 @@ class RouteAuth extends Route {
             $this->getParam($param, "auth_pwd", false)
         );
 
-        $this->authController->displayConnectionPage();
+        header('Location: index.php?action=profil');
+        exit();
     }
 }
