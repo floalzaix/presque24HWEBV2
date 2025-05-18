@@ -8,6 +8,9 @@ $this->layout("templates", ["title" => Config::get("title")]);
 
 ?>
 
+<link rel="stylesheet" href="public/css/404.css">
+
+
 <div class="err">
-    Erreur 404 !
+    <span class="err404">Erreur 404</span>
 </div>
