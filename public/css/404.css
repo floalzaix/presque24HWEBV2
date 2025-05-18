@@ -1,0 +1,69 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/assets/fond.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: inherit;
+    filter: blur(8px) brightness(0.7);
+    opacity: 1;
+}
+
+/* Pour que le contenu soit au-dessus du flou */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+.err {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.err404 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 4px 32px #d32f2f, 0 2px 8px #000;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1em;
+    animation: pop401 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    background: rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 1.2rem 3rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+@keyframes pop401 {
+    0% {
+        transform: scale(0.7) rotate(-10deg);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.1) rotate(2deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
