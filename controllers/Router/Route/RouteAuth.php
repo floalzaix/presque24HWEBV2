@@ -5,6 +5,8 @@ namespace Controllers\Router\Route;
 use Controllers\AuthController;
 use Router\Route;
 
+use Exception;
+
 class RouteAuth extends Route {
     //
     //  Instance varaibles
@@ -27,13 +29,16 @@ class RouteAuth extends Route {
     }
 
     public function post(array $param = [])  : void{
-        
-        $this->authController->login(
+        try {
+            $this->authController->login(
             $this->getParam($param, "auth_login", false),
             $this->getParam($param, "auth_pwd", false)
-        );
+            );
 
-        header('Location: index.php?action=profil');
-        exit();
+            header('Location: index.php?action=profil');
+            exit();
+        } catch (Exception $_) {
+            $this->authController->displayConnectionPage("Mauvais login ou mot de passe !");
+        }
     }
 }

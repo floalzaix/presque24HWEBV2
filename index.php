@@ -24,5 +24,5 @@ try {
     $router = new Router(); /*Instanciation de la classe Router*/
     $router->routing($_GET,$_POST); /*Appel de la méthode routing de la classe Router avec les parametres get et post*/
 } catch (Exception $e) {
-    echo "Erreur : " . $e->getMessage(); /*On récupére une erreur et on la met en message*/ 
+    echo "Erreur : " . $e->getMessage(); /*On récupére une erreur et on la met en message*/
 }

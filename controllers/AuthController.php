@@ -49,8 +49,8 @@ class AuthController
         $_SESSION["user_admin"] = $data["droit"];
     }
 
-    public function displayConnectionPage(): void
+    public function displayConnectionPage(string $message = ""): void
     {
-        echo $this->template->render("AuthView", []);
+        echo $this->template->render("AuthView", ["msg" => $message]);
     }
 }

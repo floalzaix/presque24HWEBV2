@@ -18,5 +18,6 @@ $this->layout("templates", ["title" => Config::get("title")]);
             <input type="password" name="auth_pwd" id="auth_pwd" placeholder="Mot de passe" />
             <input type="submit" name="submit_button" id="submit_button" />
         </form>
+        <div class="err_message"><?= $msg ?></div>
     </div>
 </div>
