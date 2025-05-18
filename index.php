@@ -10,8 +10,8 @@ $loader = new \helpers\psr4AutoloaderClass(); /*Instantiation de la classe qui n
 $loader->register();
 
 /* ========== Ajout des Namespace dans notre loader ========== */
-$loader->addNamespace('Helpers', '/Helpers');
-$loader->addNamespace('League\Plates', '/Vendor/plates-3.6.0/src');
+$loader->addNamespace('Helpers', '/helpers');
+$loader->addNamespace('League\Plates', '/vendor/plates-3.6.0/src');
 $loader->addNamespace('Controllers','/controllers');
 $loader->addNamespace('Config', '/config');
 $loader->addNamespace('Models', '/models');
