@@ -8,6 +8,8 @@ $this->layout("templates", ["title" => Config::get("title")]);
 
 ?>
 
+<link rel="stylesheet" href="public/css/auth.css">
+
 <div class="auth_content">
     <form action="index.php?action=profil" method="POST">
         <input type="text" name="auth_login" id="auth_login" placeholder="Identifiant" />
