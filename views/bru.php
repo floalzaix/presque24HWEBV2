@@ -8,8 +8,11 @@ $this->layout("templates", ["title" => Config::get("title")]);
 
 ?>
 
+<link rel="stylesheet" href="public/css/bru.css">
+
 <div class="bru">
     <div class="p1">
+        <h2>1<sup>ère</sup> disparition : Alicia Vernier</h2>
         Disparition inquiétante dans la forêt de Brocéliande
  
         Ploërmel, Vendredi 12 juillet 2024 - Edition Exceptionnelle
@@ -22,6 +25,7 @@ $this->layout("templates", ["title" => Config::get("title")]);
     </div>
 
     <div class="p2">
+        <h2>2<sup>ème</sup> disparition : Félicia McConnel</h2>
         Disparition de Félicia McConnel dans la forêt de Brocéliande
 
         Ploërmel, Jeudi 25 juillet 2024 - Edition Exceptionnelle
@@ -36,6 +40,7 @@ $this->layout("templates", ["title" => Config::get("title")]);
     </div>
 
     <div class="p3">
+        <h2>3<sup>ème</sup> disparition : Lewis Lochlainn</h2>
         Troisième disparition inquiétante à Brocéliande : la Guilde en alerte
 
         Ploërmel, Mardi 3 septembre 2024 - Edition Exceptionnelle
@@ -52,6 +57,7 @@ $this->layout("templates", ["title" => Config::get("title")]);
     </div>
 
     <div class="p4">
+        <h2>4<sup>ème</sup> disparition : Elias Redmark</h2>
         Quatrième disparition : enquêteur Elias Redmark au cœur du mystère
 
         Ploërmel, 20 septembre 2024
@@ -66,6 +72,7 @@ $this->layout("templates", ["title" => Config::get("title")]);
     </div>
 
     <div class="p5">
+        <h2>5<sup>ème</sup> disparition : Martin Elgarno</h2>
         5e Disparition de Martin Elgarno dans la forêt de Brocéliande
 
         Ploërmel, 14 novembre 2024 - Édition Exceptionnelle
@@ -74,5 +81,6 @@ $this->layout("templates", ["title" => Config::get("title")]);
         
         Officiellement en congé, Elgarno menait une enquête personnelle sur la mort de Redmark. Suite à ces événements, la forêt a été reclassée au niveau 8, avec un accès strictement interdit et le château placé sous scellés magiques.
         
-        Le silence autour des autopsies et la proximité des décès alimentent les interrogations. La Guilde reste muette, tandis que la forêt devient un lieu de plus en plus dangereux.</div>
+        Le silence autour des autopsies et la proximité des décès alimentent les interrogations. La Guilde reste muette, tandis que la forêt devient un lieu de plus en plus dangereux.
     </div>
+</div>
