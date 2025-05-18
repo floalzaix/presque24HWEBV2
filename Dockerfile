@@ -18,4 +18,6 @@ RUN docker-php-ext-install pdo pdo_pgsql
 
 RUN composer install --no-interaction --optimize-autoloader --no-dev
 
+RUN composer init
+
 EXPOSE 80
