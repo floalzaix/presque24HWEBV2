@@ -1,5 +1,4 @@
-<?php $this->layout('template', ['title' => 'La Guilde - Add Monster Bounty']) ?>
-<?php $listTypes = ['babayaga', 'banshee', 'basilic', 'corbeau', 'demon', 'draugr', 'espritforet', 'goblin', 'gremlin', 'leshi', 'loup', 'loupgarou', 'vampire'] ?>
+<?php $this->layout('templates', ['title' => 'La Guilde - Add Monster Bounty']) ?>
 
 <h1 class="text-center my-4">Add Monster Bounty</h1>
 
@@ -11,12 +10,12 @@
                 <input type="number" class="form-control" id="cost" name="cost" required>
             </div>
             <div class="form-group mb-4">
-                <label for="name">Monster Type</label>
-                <select class="form-select" id="name" name="name">
-                    <option value="">Select a type</option>
-                    <?php foreach ($type as $listTypes): ?>
-                        <option value="<?= $type ?>">
-                            <?= ucfirst($type) ?>
+                <label for="monster">Monster</label>
+                <select class="form-select" id="monster" name="monster">
+                    <option value="">Select a monster</option>
+                    <?php foreach ($listMonsters as $monster): ?>
+                        <option value="<?= $monster ?>">
+                            <?= ucfirst($monster) ?>
                         </option>
                     <?php endforeach ?>
                 </select>

@@ -8,10 +8,12 @@ use Controllers\ErrController;
 use Controllers\MapController;
 use Controllers\MonsterController;
 use Controllers\ProfilController;
+use Controllers\BountyController;
 use Controllers\Router\Route\RouteAuth;
 use Controllers\Router\Route\RouteBru;
 use Controllers\Router\Route\RouteErr;
 use Controllers\Router\Route\RouteProfil;
+use Controllers\Router\Route\RouteBounty;
 use Route\RouteMap;
 use Route\RouteMonster;
 
@@ -38,7 +40,8 @@ class Router {
             "auth" => new AuthController(),
             "err" => new ErrController(),
             "profil" => new ProfilController(),
-            "bru" => new BruController()
+            "bru" => new BruController(),
+            "bounty" => new BountyController()
         ];
     }
 
@@ -54,7 +57,8 @@ class Router {
             "auth" => new RouteAuth($this->ctrlList["auth"]),
             "err" => new RouteErr($this->ctrlList["err"]),
             "profil" => new RouteProfil($this->ctrlList["profil"]),
-            "bru" => new RouteBru($this->ctrlList["bru"])
+            "bru" => new RouteBru($this->ctrlList["bru"]),
+            "bounty" => new RouteBounty($this->ctrlList["bounty"])
         ];
     }
 
