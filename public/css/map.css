@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url("http://localhost/presque24hWEB/public/images/assets/fond.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: url("http://localhost/presque24hWEB/public/images/assets/fond.png") no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px) brightness(0.8); /* flou + léger assombrissement */
+    opacity: 1;
+}
+
+/* Pour que le contenu soit au-dessus du flou */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+.map-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 48px;
+    margin: 64px auto;
+    max-width: 1400px;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.map-square {
+    flex-shrink: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    background: none !important;
+}
+
+#map {
+    width: 600px;
+    height: 600px;
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 24px;
+}
+
+.map-info {
+    flex: 1;
+    background: rgba(255,255,255,0.30); /* Blanc translucide, ajuste l'opacité ici (0.85 -> plus opaque, 0.7 -> plus transparent) */
+    border-radius: 24px;
+    padding: 40px;
+    min-height: 300px;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-content {
+    width: 100%;
+}
+
+.info-content h3 {
+    text-align: center;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+.info-content p {
+    text-align: justify;
+    margin: 0;
+}
+
+@media (max-width: 1100px) {
+    .map-container {
+        gap: 24px;
+        max-width: 98vw;
+    }
+    .map-square, .map-info {
+        max-width: 98vw;
+    }
+    .map-square {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 800px) {
+    .map-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin: 24px auto;
+    }
+    .map-square {
+        width: 90vw;
+        height: 60vw;
+        min-height: 200px;
+        max-width: 98vw;
+        max-height: 60vw;
+    }
+    .map-info {
+        width: 90vw;
+        min-height: 120px;
+        padding: 20px;
+        font-size: 1em;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .map-square {
+        width: 98vw;
+        height: 50vw;
+        min-height: 120px;
+    }
+    .map-info {
+        width: 98vw;
+        padding: 10px;
+        font-size: 0.95em;
+    }
+}
