@@ -5,6 +5,8 @@ html, body {
 }
 
 body {
+    align-items: center;
+    justify-content: center;
     background-image: url("../images/assets/fond.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,6 +34,7 @@ body > * {
 }
 
 .auth_content {
+    display: flex;
     background: rgba(255, 255, 255, 0.13);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
     border-radius: 20px;
@@ -87,4 +90,28 @@ body > * {
 .auth_content input[type="submit"]:hover {
     background: #b71c1c;
     transform: translateY(-2px) scale(1.03);
+}
+
+.auth_center {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Correction pour un centrage parfait même avec margin: 2rem sur .auth_content */
+    padding-top: -50%;
+    padding-bottom: 50%;
+}
+
+.auth_content,
+.auth_content * {
+    color: #fff !important;
+}
+
+.title-login {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-align: center;
 }
