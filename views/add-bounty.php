@@ -1,5 +1,7 @@
 <?php $this->layout('templates', ['title' => 'La Guilde - Add Monster Bounty']) ?>
 
+<link rel="stylesheet" href="public/css/add-bounty.css">
+
 <h1 class="text-center my-4">Add Monster Bounty</h1>
 
 <form action="" method="post" class="container">
