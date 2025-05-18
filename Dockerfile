@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN composer install --no-interaction --optimize-autoloader --no-dev
+
 COPY . /var/www/html
 
 RUN apt-get update && apt-get install -y libpq-dev
@@ -15,9 +17,5 @@ RUN apt-get update && apt-get install -y libpq-dev
 RUN apt-get install -y libicu-dev && docker-php-ext-install intl && apt-get clean 
 
 RUN docker-php-ext-install pdo pdo_pgsql
-
-RUN composer install --no-interaction --optimize-autoloader --no-dev
-
-RUN composer init
 
 EXPOSE 80
